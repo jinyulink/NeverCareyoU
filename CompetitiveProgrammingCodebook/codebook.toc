@@ -1,0 +1,48 @@
+\contentsline {section}{\numberline {1}Setup}{1}{}%
+\contentsline {subsection}{\numberline {1.1}設定}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Default}{1}{}%
+\contentsline {section}{\numberline {2}Basic}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Binary Search}{1}{}%
+\contentsline {subsection}{\numberline {2.2}merge sort}{1}{}%
+\contentsline {subsection}{\numberline {2.3}四捨五入}{2}{}%
+\contentsline {subsection}{\numberline {2.4}排序}{2}{}%
+\contentsline {subsection}{\numberline {2.5}nth element}{2}{}%
+\contentsline {section}{\numberline {3}flow}{2}{}%
+\contentsline {subsection}{\numberline {3.1}dinic}{2}{}%
+\contentsline {subsection}{\numberline {3.2}MinCostFlow}{2}{}%
+\contentsline {subsection}{\numberline {3.3}Kuhn Munkres 最大完美二分匹配}{3}{}%
+\contentsline {section}{\numberline {4}Math}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Binary exponentiation}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Euclidean gcd}{3}{}%
+\contentsline {subsection}{\numberline {4.3}lcm 最小公倍數}{3}{}%
+\contentsline {subsection}{\numberline {4.4}Miller Rabin}{3}{}%
+\contentsline {subsection}{\numberline {4.5}快速乘}{3}{}%
+\contentsline {section}{\numberline {5}Geometry}{4}{}%
+\contentsline {subsection}{\numberline {5.1}ConvexHull}{4}{}%
+\contentsline {section}{\numberline {6}Graph}{4}{}%
+\contentsline {subsection}{\numberline {6.1}Strongly Connected Component}{4}{}%
+\contentsline {subsection}{\numberline {6.2}BCC based on vertex}{4}{}%
+\contentsline {subsection}{\numberline {6.3}graph}{4}{}%
+\contentsline {subsection}{\numberline {6.4}bfs}{5}{}%
+\contentsline {subsection}{\numberline {6.5}dfs}{5}{}%
+\contentsline {subsection}{\numberline {6.6}dijkstra(單源最短路徑)(堆優化O(mlogn))}{5}{}%
+\contentsline {subsection}{\numberline {6.7}bellman ford}{5}{}%
+\contentsline {subsection}{\numberline {6.8}SPFA求最短路徑}{5}{}%
+\contentsline {subsection}{\numberline {6.9}SPFA判斷負環}{6}{}%
+\contentsline {subsection}{\numberline {6.10}floyd}{6}{}%
+\contentsline {subsection}{\numberline {6.11}無向圖中字典序最小歐拉路徑}{7}{}%
+\contentsline {subsection}{\numberline {6.12}topological sort}{7}{}%
+\contentsline {section}{\numberline {7}String}{7}{}%
+\contentsline {subsection}{\numberline {7.1}KMP}{7}{}%
+\contentsline {subsection}{\numberline {7.2}Z Value}{7}{}%
+\contentsline {section}{\numberline {8}Data Structure}{7}{}%
+\contentsline {subsection}{\numberline {8.1}DSU}{7}{}%
+\contentsline {subsection}{\numberline {8.2}trie}{8}{}%
+\contentsline {subsection}{\numberline {8.3}Segment tree}{8}{}%
+\contentsline {section}{\numberline {9}Others}{8}{}%
+\contentsline {subsection}{\numberline {9.1}dp 背包問題}{8}{}%
+\contentsline {subsection}{\numberline {9.2}dp 完全背包問題}{8}{}%
+\contentsline {subsection}{\numberline {9.3}dp 多重背包問題}{9}{}%
+\contentsline {subsection}{\numberline {9.4}LIS 最長上升子序列}{9}{}%
+\contentsline {subsection}{\numberline {9.5}LCS 最長公共子序列}{9}{}%
+\contentsline {subsection}{\numberline {9.6}LCIS 最長公共上升子序列}{10}{}%

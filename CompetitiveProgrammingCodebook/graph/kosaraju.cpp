@@ -1,0 +1,46 @@
+1. define
+#define PB push_back
+#define FZ(x) memset(x,0,sizeof(x))
+const ll MXN = 1e5+10;
+-------------------------------------------------------
+2. code
+// 有向環 連通塊
+scc.init(n); //給點數
+scc.addEdge(u,v); //u->v
+scc.solve();
+if(scc.bln[u]==scc.bln[v]) 表示u跟v是同一群
+-------------------------------------------------------
+struct Scc{
+  int n, nScc, vst[MXN], bln[MXN];
+  vector<int> E[MXN], rE[MXN], vec;
+  void init(int _n){
+    n = _n;
+    for (int i=0; i<MXN; i++)
+      E[i].clear(), rE[i].clear();
+  }
+  void addEdge(int u, int v){
+    E[u].PB(v); rE[v].PB(u);
+  }
+  void DFS(int u){
+    vst[u]=1;
+    for (auto v : E[u]) if (!vst[v]) DFS(v);
+    vec.PB(u);
+  }
+  void rDFS(int u){
+    vst[u] = 1; bln[u] = nScc;
+    for (auto v : rE[u]) if (!vst[v]) rDFS(v);
+  }
+  void solve(){
+    nScc = 0;
+    vec.clear();
+    FZ(vst);
+    for (int i=0; i<n; i++)
+      if (!vst[i]) DFS(i);
+    reverse(vec.begin(),vec.end());
+    FZ(vst);
+    for (auto v : vec)
+      if (!vst[v]){
+        rDFS(v); nScc++;
+      }
+  }
+}scc;

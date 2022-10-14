@@ -1,0 +1,19 @@
+Ctrl+Alt+T
+vim ~/.vimrc
+
+syntax on
+set nu
+set tabstop=4
+set shiftwidth=4
+colo evening
+set mouse=a
+set cin
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
+vim a.cpp
+g++ A.cpp -o A
+./A

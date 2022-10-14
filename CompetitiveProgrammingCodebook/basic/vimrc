@@ -1,0 +1,15 @@
+Ctrl+Alt+T 啟動Terminal
+vim ~/.vimrc
+g++ A.cpp -o A
+./A
+
+syntax on
+set nu
+set tabstop=4
+set shiftwidth=4
+colo evening
+set mouse=a
+set cin
+
+:set mouse=a
+filetype indent on

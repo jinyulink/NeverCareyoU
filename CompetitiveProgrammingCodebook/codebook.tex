@@ -1,0 +1,264 @@
+\documentclass[a4paper,10pt,twocolumn,oneside]{article}
+\setlength{\columnsep}{10pt}                                                              %兩欄模式的間距
+\setlength{\columnseprule}{0pt}                                                                %兩欄模式間格線粗細
+
+\usepackage{amsthm}								%定義，例題
+\usepackage{amssymb}
+%\usepackage[margin=2cm]{geometry}
+\usepackage{fontspec}								%設定字體
+\usepackage{color}
+\usepackage[x11names]{xcolor}
+\usepackage{listings}								%顯示code用的
+%\usepackage[Glenn]{fncychap}						%排版，頁面模板
+\usepackage{fancyhdr}								%設定頁首頁尾
+\usepackage{graphicx}								%Graphic
+\usepackage{enumerate}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage[CheckSingle, CJKmath]{xeCJK}
+% \usepackage{CJKulem}
+%\usepackage[T1]{fontenc}
+\titlespacing{\section}{0cm}{0cm}{0cm}
+\titlespacing{\subsection}{0cm}{0cm}{0cm}
+\usepackage{amsmath, courier, listings, fancyhdr, graphicx}
+\topmargin=0pt
+\headsep=5pt
+\textheight=780pt
+\footskip=0pt
+\voffset=-40pt
+\textwidth=545pt
+\marginparsep=0pt
+\marginparwidth=0pt
+\marginparpush=0pt
+\oddsidemargin=0pt
+\evensidemargin=0pt
+\hoffset=-42pt
+
+%\renewcommand\listfigurename{圖目錄}
+%\renewcommand\listtablename{表目錄} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setmainfont [				%主要字型
+    Path = .fonts/ttf/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic
+  ] {Consolas}
+
+\setmonofont [        
+    Path = .fonts/ttf/,
+    UprightFont = *-Regular
+  ] {Monaco}
+
+% \setmainfont{Consolas}				%主要字型
+% \setmonofont{Monaco}				%主要字型
+% \setCJKmainfont{Noto Sans CJK TC}
+
+% \setCJKmainfont{Consolas}			%中文字型
+%\setmainfont{sourcecodepro}
+\XeTeXlinebreaklocale "zh"						%中文自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt				%設定段落之間的距離
+\setcounter{secnumdepth}{3}						%目錄顯示第三層
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+\@empty\z@\@empty
+\makeatother
+\lstset{											% Code顯示
+language=C++,										% the language of the code
+basicstyle=\footnotesize\ttfamily, 						% the size of the fonts that are used for the code
+%numbers=left,										% where to put the line-numbers
+numberstyle=\footnotesize,						% the size of the fonts that are used for the line-numbers
+stepnumber=1,										% the step between two line-numbers. If it's 1, each line  will be numbered
+numbersep=5pt,										% how far the line-numbers are from the code
+backgroundcolor=\color{white},					% choose the background color. You must add \usepackage{color}
+showspaces=false,									% show spaces adding particular underscores
+showstringspaces=false,							% underline spaces within strings
+showtabs=false,									% show tabs within strings adding particular underscores
+frame=false,											% adds a frame around the code
+tabsize=2,											% sets default tabsize to 2 spaces
+captionpos=b,										% sets the caption-position to bottom
+breaklines=true,									% sets automatic line breaking
+breakatwhitespace=false,							% sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)},							% if you want to add a comment within your code
+morekeywords={*},									% if you want to add more keywords to the set
+keywordstyle=\bfseries\color{Blue1},
+commentstyle=\itshape\color{Red4},
+stringstyle=\itshape\color{Green4},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\fancyfoot{}
+% \fancyfoot[R]{\includegraphics[width=20pt]{ironwood.jpg}}
+\fancyhead[C]{National Central University}
+\fancyhead[L]{NeverCareyoU}
+\fancyhead[R]{(October 15, 2022) \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\contentsname}{Contents} 
+
+\scriptsize
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newpage
+
+\lstinputlisting{basic/meow}
+
+% \lstinputlisting{others/cat.cpp}
+
+\section{Setup}
+
+\subsection{設定}
+\lstinputlisting{basic/setup}
+
+\subsection{Default}
+\lstinputlisting{basic/cpp_lang.cpp}
+
+% \subsection{vim 指令}
+% \lstinputlisting{basic/vim}
+
+\section{Basic}
+
+\subsection{Binary Search}
+\lstinputlisting{basic/binary.cpp}
+
+\subsection{merge sort}
+\lstinputlisting{basic/mergesort.cpp}
+
+\subsection{四捨五入}
+\lstinputlisting{basic/1.cpp}
+
+\subsection{排序}
+\lstinputlisting{basic/2.cpp}
+
+\subsection{nth element}
+\lstinputlisting{basic/nth_element.cpp}
+
+\section{flow}
+
+\subsection{dinic}
+\lstinputlisting{flow/dinic_BCW.cpp}
+
+\subsection{MinCostFlow}
+\lstinputlisting{flow/MinCostFlow.cpp}
+
+\subsection{Kuhn Munkres 最大完美二分匹配}
+\lstinputlisting{flow/KM2.cpp}
+
+\section{Math}
+
+\subsection{Binary exponentiation}
+\lstinputlisting{math/binary_ex.cpp}
+
+\subsection{Euclidean gcd}
+\lstinputlisting{math/gcd.cpp}
+
+\subsection{lcm 最小公倍數}
+\lstinputlisting{math/lcm.cpp}
+
+\subsection{Miller Rabin}
+\lstinputlisting{math/Miller_Rabin.cpp}
+
+\subsection{快速乘}
+\lstinputlisting{math/O(1)mul.cpp}
+
+% \subsection{ax+by=gcd}
+% \lstinputlisting{math/ax+by=gcd.cpp}
+
+% \subsection{Result}
+% \input{math/theorem.tex}
+
+\section{Geometry}
+
+\subsection{ConvexHull}
+\lstinputlisting{geometry/convexhull.cpp}
+
+\section{Graph}
+
+\subsection{Strongly Connected Component}
+\lstinputlisting{graph/kosaraju.cpp}
+
+\subsection{BCC based on vertex}
+\lstinputlisting{graph/bcc_vertex.cpp}
+
+\subsection{graph}
+\lstinputlisting{graph/graphh}
+
+\subsection{bfs}
+\lstinputlisting{graph/bfs.cpp}
+
+\subsection{dfs}
+\lstinputlisting{graph/dfs.cpp}
+
+\subsection{dijkstra(單源最短路徑)(堆優化O(mlogn))}
+\lstinputlisting{graph/dijkstra.cpp}
+
+\subsection{bellman ford}
+\lstinputlisting{graph/bellmanford.cpp}
+
+\subsection{SPFA求最短路徑}
+\lstinputlisting{graph/spfa.cpp}
+
+\subsection{SPFA判斷負環}
+\lstinputlisting{graph/spfa1.cpp}
+
+\subsection{floyd}
+\lstinputlisting{graph/floyd.cpp}
+
+\subsection{無向圖中字典序最小歐拉路徑}
+\lstinputlisting{graph/eula.cpp}
+
+\subsection{topological sort}
+\lstinputlisting{graph/topo.cpp}
+
+% \subsection{K-th Shortest Path}
+% \lstinputlisting{graph/KSP.cpp}
+
+\section{String}
+
+\subsection{KMP}
+\lstinputlisting{string/KMP.cpp}
+
+\subsection{Z Value}
+\lstinputlisting{string/zvalue.cpp}
+
+\section{Data Structure}
+
+\subsection{DSU}
+\lstinputlisting{dataStructure/dsu.cpp}
+
+\subsection{trie}
+\lstinputlisting{dataStructure/trie.cpp}
+
+\subsection{Segment tree}
+\lstinputlisting{dataStructure/seg_tree.cpp}
+
+% \subsection{Treap}
+% \lstinputlisting{dataStructure/treap_split_key&kth.cpp}
+
+\section{Others}
+
+\subsection{dp 背包問題}
+\lstinputlisting{others/dp_backpack.cpp}
+
+\subsection{dp 完全背包問題}
+\lstinputlisting{others/dp_backpack1.cpp}
+
+\subsection{dp 多重背包問題}
+\lstinputlisting{others/dp_backpack2.cpp}
+
+\subsection{LIS 最長上升子序列}
+\lstinputlisting{others/lis.cpp}
+
+\subsection{LCS 最長公共子序列}
+\lstinputlisting{others/lcs.cpp}
+
+\subsection{LCIS 最長公共上升子序列}
+\lstinputlisting{others/lcis.cpp}
+
+\end{document}
